@@ -1,0 +1,11 @@
+---
+- name: 'Create user'
+  community.postgresql.postgresql_user:
+    db: '{{ credentials.db_name }}'
+    name: '{{ credentials.user_name }}'
+    password: '{{ credentials.user_password }}'
+    priv: ALL
+    expires: infinity
+  become: yes
+  become_user: postgres
+...

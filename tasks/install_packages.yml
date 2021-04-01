@@ -1,0 +1,10 @@
+---
+- name: 'Install system packages'
+  apt:
+    pkg:
+    - acl
+    - postgresql
+    - postgresql-contrib
+    - python3-psycopg2
+  become: yes
+...

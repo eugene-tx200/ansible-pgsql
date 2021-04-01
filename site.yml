@@ -1,0 +1,18 @@
+---
+# This playbook deploys olx parser analyzer project.
+- hosts: localhost
+  connection: local
+  #become: yes
+  vars_files:
+  - credentials.yml
+
+  tasks:
+  # Install packages
+  - include_tasks: tasks/install_packages.yml
+
+  # Create database
+  - include_tasks: tasks/create_db.yml
+
+  # Create user
+  - include_tasks: tasks/create_db_user.yml
+...

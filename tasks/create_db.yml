@@ -1,0 +1,8 @@
+---
+- name: 'Create database'
+  community.postgresql.postgresql_db:
+    name: '{{ credentials.db_name }}'
+    encoding: UTF-8
+  become: yes
+  become_user: postgres
+...
