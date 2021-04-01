@@ -7,6 +7,7 @@ Ansible playbook to deploy PostgreSQL for Django application
 Update 'hosts' inventory and create 'credentials.yml' (Copy credentials.yml.example).
 
 ### Run
+        ansible-galaxy collection install community.postgresql
         ansible-playbook -K site.yml
 
 #### Tested on
